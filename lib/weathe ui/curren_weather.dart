@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CurrentWeather extends StatelessWidget {
-  const CurrentWeather({super.key});
+  int id;
+  CurrentWeather({super.key ,required this.id});
 
   @override
   Widget build(BuildContext context) {
+    print(3);
     return Column(
       children: [
         Text(
-          '25 Degree',
+          '$id Degree',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
         SizedBox(

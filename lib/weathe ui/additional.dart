@@ -9,6 +9,7 @@ class Additional extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: SizedBox(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SizedBox(
               width: 150,
@@ -27,7 +28,7 @@ class Additional extends StatelessWidget {
                         height: 30,
                       ),
                       Icon(
-                        Icons.water,
+                        Icons.water_drop,
                         size: 30,
                       ),
                       SizedBox(
@@ -41,9 +42,6 @@ class Additional extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              width: 7,
             ),
             SizedBox(
               width: 150,
@@ -62,7 +60,7 @@ class Additional extends StatelessWidget {
                         height: 30,
                       ),
                       Icon(
-                        Icons.wind_power,
+                        Icons.air_sharp,
                         size: 30,
                       ),
                       SizedBox(
@@ -76,9 +74,6 @@ class Additional extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              width: 7,
             ),
             SizedBox(
               width: 150,
@@ -97,7 +92,7 @@ class Additional extends StatelessWidget {
                         height: 30,
                       ),
                       Icon(
-                        Icons.umbrella,
+                        Icons.beach_access,
                         size: 30,
                       ),
                       SizedBox(
