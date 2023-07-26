@@ -1,10 +1,9 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_apk_1/data/api.dart';
-import 'package:flutter_apk_1/weathe%20ui/additional.dart';
-import 'package:flutter_apk_1/weathe%20ui/curren_weather.dart';
-import 'package:flutter_apk_1/weathe%20ui/weather_forecast.dart';
+import 'package:flutter_apk_1/ui/weathe%20ui/additional.dart';
+import 'package:flutter_apk_1/ui/weathe%20ui/curren_weather.dart';
+import 'package:flutter_apk_1/ui/weathe%20ui/weather_forecast.dart';
 
 class WeatherApp extends StatefulWidget {
   const WeatherApp({super.key});
@@ -14,6 +13,14 @@ class WeatherApp extends StatefulWidget {
 }
 
 class _WeatherAppState extends State<WeatherApp> {
+  late Future apiCall;
+
+  @override
+  void initState() {
+    super.initState();
+    apiCall = UsersListApi.getUsers();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -36,7 +43,7 @@ class _WeatherAppState extends State<WeatherApp> {
           ],
         ),
         body: FutureBuilder(
-          future: UsersListApi.getUsers(),
+          future: apiCall,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(

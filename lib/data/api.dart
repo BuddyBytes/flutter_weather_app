@@ -5,7 +5,7 @@ class UsersListApi {
   static Future getUsers() async {
     try {
       final result = await http
-          .get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
+          .get(Uri.parse('https://jsonplaceholder.typicode.com/todos'));
       return jsonDecode(result.body);
     } catch (e) {
       throw e.toString();
